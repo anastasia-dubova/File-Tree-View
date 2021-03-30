@@ -1,0 +1,71 @@
+:host {
+	display: block;
+	margin-left: 2rem;
+	cursor: pointer;
+	
+	.title {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		.icon {
+			margin-right: .5rem;
+		}
+		.caption {
+			color: blue;
+		}
+	}
+	
+	&.opened, &.closed, &.empty {
+		.icon {
+			box-sizing: content-box;
+			width: 1.25rem;
+			height: 1.25rem;
+			border: 1px solid #000;
+			display: block;
+			position: relative;
+		}
+	}
+	&.opened, &.closed {
+		& > .title:first-child > .icon:before {
+			content: '';
+			height: 2px;
+			width: 80%;
+			background-color: #000;
+			top: calc(50% - 1px);
+			left: 10%;
+			position: absolute;
+		}
+		& > .title:first-child > .icon:after {
+			content: '';
+			height: 2px;
+			width: 80%;
+			background-color: #000;
+			top: calc(50% - 1px);
+			left: 10%;
+			position: absolute;
+			//transform: rotate(0deg);
+			//transition: .8s;
+		}
+	}
+	
+	&.closed {
+		& > .title:first-child > .icon:after {
+			content: '';
+			height: 80%;
+			width: 2px;
+			background-color: #000;
+			left: calc(50% - 1px);
+			top: 10%;
+			position: absolute;
+			//transform: rotate(180deg);
+			//transition: .8s;
+		}
+		& > *:not(.title) {
+			display: none;
+		}
+	}
+
+	&.empty {
+		opacity: .3;
+	}
+}

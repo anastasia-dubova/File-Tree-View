@@ -1,0 +1,14 @@
+<div class="wrapper">
+	<h1>Отображение древовидной структуры файловой системы</h1>
+	<div class="search">
+		<app-search></app-search>
+	</div>
+	<div class="container">
+		<div class="container__tree">
+			<app-tree [value]="fileList.list"></app-tree>
+		</div>
+		<div class="container__preview">
+			<app-preview></app-preview>
+		</div>
+	</div>
+</div>

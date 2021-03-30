@@ -1,0 +1,9 @@
+<ng-container>
+	<input type='text'
+			 placeholder='Search files or folders...'
+			 [(ngModel)]="searchService.searchString"
+			 (input)="searchFile($event)"
+			 name="search"
+	/>
+	<img src="../../assets/lens.png" />
+</ng-container>

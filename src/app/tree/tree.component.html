@@ -1,0 +1,20 @@
+<ng-container *ngIf="value && value.files; else itemFile">
+	<div class="title">
+		<div class="icon"></div>
+		<div class="caption">{{value.name}}</div>
+	</div>
+	<app-tree
+		*ngFor="let item of value.files"
+		[value]="item"
+		>
+	></app-tree>
+</ng-container>
+
+<ng-template #itemFile>
+	<ng-container *ngIf="value && value.name">
+		<!-- 
+		{{value.name | filesFilter:searchService.searchString}}
+		 -->
+		 {{value.name}}
+	</ng-container>
+</ng-template>
