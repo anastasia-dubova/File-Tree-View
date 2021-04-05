@@ -1,5 +1,8 @@
 <ng-container *ngIf="value && value.files; else itemFile">
-	<div class="title">
+<!-- 
+<ng-container *ngIf="fileList.isFolder(value); else itemFile">
+ -->
+	<div class="title" (click)="clickFolder($event)">
 		<div class="icon"></div>
 		<div class="caption">{{value.name}}</div>
 	</div>
@@ -15,6 +18,6 @@
 		<!-- 
 		{{value.name | filesFilter:searchService.searchString}}
 		 -->
-		 {{value.name}}
+		 <div class="caption" (click)="selectFileHandler($event)" >{{value.name}}</div>
 	</ng-container>
 </ng-template>

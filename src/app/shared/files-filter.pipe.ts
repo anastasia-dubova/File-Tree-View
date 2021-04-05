@@ -1,12 +1,12 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { FileType, DirectoryType } from '../shared/file-list.service';
+import { DirectoryType } from '../shared/file-list.service';
 
 
 @Pipe({
 	name: 'filesFilter'
 })
 export class FilesFilterPipe implements PipeTransform {
-	transform(src: DirectoryType<FileType>, search: string = ''): DirectoryType<FileType> {
+	transform(src: DirectoryType, search: string = ''): DirectoryType {
 
 		if(!search.trim()) {
 			return src

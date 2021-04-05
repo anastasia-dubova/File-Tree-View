@@ -1,27 +1,24 @@
 {
 	"name": "исходная папка",
-	"opened": "true",
 	"files": [
-		{"name": "файл_1.txt", "path": ""},
-		{"name": "файл_2.txt", "path": ""},
+		{"name": "файл_1.txt"},
+		{"name": "файл_2.txt"},
+		{"name": "файл_4.txt"},
 		{
 			"name": "папка_1",
 			"files": []
 		},
 		{
 			"name": "папка_2",
-			"opened": "true",
-			"files": [{"name": "файл_2_1.txt", "path": ""}, {"name": "файл_2_2.txt", "path": ""}]
+			"files": [{"name": "файл_2_1.txt"}, {"name": "файл_2_2.txt"}]
 		},
-		{"name": "файл_3.txt", "path": ""},
+		{"name": "файл_3.txt"},
 		{
 			"name": "папка_3",
-			"opened": "false",
 			"files": [{"name": "папка_3_3",
-						"opened": "false",
-						"files": [{"name": "файл_3_3_1.txt", "path": ""}, {"name": "файл_3_3_2.txt", "path": ""}]},
-					{"name": "файл_3_1.txt", "path": ""},
-					{"name": "файл_3_2.txt", "path": ""},
-					{"name": "файл_3_3.txt", "path": ""}]
+						"files": [{"name": "файл_3_3_1.txt"}, {"name": "файл_3_3_2.txt"}]},
+					{"name": "файл_3_1.txt"},
+					{"name": "файл_3_2.txt"},
+					{"name": "файл_3_3.txt"}]
 		}]
 }
